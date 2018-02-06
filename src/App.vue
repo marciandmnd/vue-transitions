@@ -3,7 +3,13 @@
         <div class="row">
             <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
                 <h1>Animations</h1>
-
+                <hr>
+                <button @click="show =!show" class="btn btn-primary">Show alert</button>
+                <br>
+                <br>
+                <transition>
+                    <div v-if="show" class="alert alert-info">Some info</div>
+                </transition>
             </div>
         </div>
     </div>
@@ -13,7 +19,7 @@
     export default {
         data() {
             return {
-
+                show: false
             }
         }
     }
